@@ -15,7 +15,6 @@ export class App extends Component {
     const btnName = event.currentTarget.textContent.toLowerCase();
 
     this.setState(prevState => {
-      console.log(prevState);
       return {
         [btnName]: prevState[btnName] + 1,
       };

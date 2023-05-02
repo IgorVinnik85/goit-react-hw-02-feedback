@@ -7,17 +7,17 @@ export const FeedbackOptions = ({ addGoodFeedback }) => {
    
       <ul className={css.list}>
         <li>
-          <button type="button" onClick={addGoodFeedback}>
+          <button className={css.btn} type="button" onClick={addGoodFeedback}>
             Good
           </button>
         </li>
         <li>
-          <button type="button" onClick={addGoodFeedback}>
+          <button className={css.btn} type="button" onClick={addGoodFeedback}>
             Neutral
           </button>
         </li>
         <li>
-          <button type="button" onClick={addGoodFeedback}>
+          <button className={css.btn} type="button" onClick={addGoodFeedback}>
             Bad
           </button>
         </li>
