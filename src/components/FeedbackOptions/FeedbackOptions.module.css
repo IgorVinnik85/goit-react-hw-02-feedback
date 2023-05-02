@@ -1,0 +1,12 @@
+.title {
+  margin-bottom: 15px;
+}
+
+.list {
+  display: flex;
+  gap: 10px;
+}
+
+.feedback {
+    margin-bottom: 30px;
+}
