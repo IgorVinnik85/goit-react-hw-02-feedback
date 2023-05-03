@@ -43,7 +43,7 @@ export class App extends Component {
     return (
       <>
         <Section title="Please leave feedback">
-          {<FeedbackOptions addGoodFeedback={this.addAllFeedback} />}
+          {<FeedbackOptions addFeedback={this.addAllFeedback} />}
         </Section>
 
         <Section title="Statistics">
