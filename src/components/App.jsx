@@ -11,6 +11,8 @@ export class App extends Component {
     bad: 0,
   };
 
+  btnTitle = Object.keys(this.state);
+
   addAllFeedback = event => {
     const btnName = event.currentTarget.textContent.toLowerCase();
 
@@ -43,7 +45,12 @@ export class App extends Component {
     return (
       <>
         <Section title="Please leave feedback">
-          {<FeedbackOptions addFeedback={this.addAllFeedback} />}
+          {
+            <FeedbackOptions
+              addFeedback={this.addAllFeedback}
+              btn={this.btnTitle}
+            />
+          }
         </Section>
 
         <Section title="Statistics">

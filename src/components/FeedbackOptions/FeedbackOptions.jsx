@@ -1,31 +1,26 @@
-import css from './FeedbackOptions.module.css';
+import React from 'react';
 import PropTypes from 'prop-types';
+import css from './FeedbackOptions.module.css';
 
-export const FeedbackOptions = ({ addFeedback }) => {
-  // console.log(addGood);
+export const FeedbackOptions = ({ addFeedback, btn }) => {
   return (
     <div className={css.feedback}>
       <ul className={css.list}>
-        <li>
-          <button className={css.btn} type="button" onClick={addFeedback}>
-            Good
-          </button>
-        </li>
-        <li>
-          <button className={css.btn} type="button" onClick={addFeedback}>
-            Neutral
-          </button>
-        </li>
-        <li>
-          <button className={css.btn} type="button" onClick={addFeedback}>
-            Bad
-          </button>
-        </li>
+        {btn.map(el => {
+          return (
+            <li key={el}>
+              <button className={css.btn} type="button" onClick={addFeedback}>
+                {el}
+              </button>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
 };
 
-FeedbackOptions.protoType = {
+FeedbackOptions.propTypes = {
   addFeedback: PropTypes.func.isRequired,
+  btn: PropTypes.array.isRequired,
 };
