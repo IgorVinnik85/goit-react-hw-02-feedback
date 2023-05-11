@@ -14,7 +14,6 @@ export class App extends Component {
   btnTitle = Object.keys(this.state);
 
   addAllFeedback = event => {
-    console.log(event.currentTarget.textContent);
     const btnName = event.currentTarget.textContent.toLowerCase();
 
     this.setState(prevState => {
